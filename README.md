@@ -12,7 +12,7 @@ A single-IC dual-channel DC motor driver board built around the Toshiba **TB6612
 
 ## Overview
 
-This board breaks out one TB6612FNG dual H-bridge driver IC with all required support circuitry: power decoupling, a power-good LED indicator, and header connectors for power, control signals, and motor outputs. It's designed to be one repeatable "cell" in a multi-board or multi-instance motor control system — multiple copies of this board can be powered from a shared 12V/3.3V/GND distribution and controlled independently from a microcontroller.
+This board breaks out one TB6612FNG dual H-bridge driver IC with all required support circuitry: power decoupling, a power-good LED indicator, and header connectors for power, control signals, and motor outputs. It's designed to be one repeatable "cell" in a multi-board or multi-instance motor control system. Multiple copies of this board can be powered from a shared 12V/3.3V/GND distribution and controlled independently from a microcontroller.
 
 ## What It's For
 
@@ -123,10 +123,4 @@ For simple on/off (single-direction) loads, tie the unused direction input low a
 
 ## Intended Use in a Larger System
 
-This board is designed as a repeatable unit — multiple instances can be deployed in parallel, each independently controlled via its own J2 connector, while sharing a common 12V and 3.3V distribution through J3/J6. This allows a single microcontroller to drive many motor channels (4 GPIOs per board) without needing per-board enable/standby management.
-
-## Manufacturing Notes
-
-- Designed for fabrication at JLCPCB (or equivalent), standard 2-layer (or more) FR4 PCB.
-- SSOP-24, 0.65mm lead pitch package — verify footprint pad pitch against datasheet dimensions regardless of footprint source (DigiKey vs. LCSC libraries may differ cosmetically but should match electrically if pitch and body width are correct).
-- All SMD components are reflow-solderable (paste + hot plate/oven compatible).
+This board is designed as a repeatable unit, multiple instances can be deployed in parallel, each independently controlled via its own J2 connector, while sharing a common 12V and 3.3V distribution through J3/J6. This allows a single microcontroller to drive many motor channels (4 GPIOs per board) without needing per-board enable/standby management.
