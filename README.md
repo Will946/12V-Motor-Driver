@@ -4,7 +4,7 @@ A single-IC dual-channel DC motor driver board built around the Toshiba **TB6612
 
 ## Board Render
 
-![PCB 3D render](TB6612FNG_PCB.png)
+![PCB 3D render](TB6612FNG.png)
 
 ## Schematic
 
